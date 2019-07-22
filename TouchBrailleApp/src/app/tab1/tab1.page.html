@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Touch Braille
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+   <ion-row>
+      <ion-col col-6> 
+          <ion-button (click)="clickP1()" color="{{buttonColorP1}}" size="large">P1</ion-button>
+      </ion-col>    
+      <ion-col col-6>
+          <ion-button (click)="clickP4()" color="{{buttonColorP4}}" size="large">P4</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-6> 
+            <ion-button (click)="clickP2()" color="{{buttonColorP2}}" size="large">P2</ion-button>
+        </ion-col>    
+        <ion-col col-6>
+            <ion-button (click)="clickP5()" color="{{buttonColorP5}}" size="large">P5</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col col-6> 
+              <ion-button (click)="clickP3()" color="{{buttonColorP3}}" size="large">P3</ion-button>
+          </ion-col>    
+          <ion-col col-6>
+              <ion-button (click)="clickP6()" color="{{buttonColorP6}}" size="large">P6</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-6> 
+            </ion-col>
+            <ion-col col-6> 
+                <ion-button (click)="connect()" color="{{buttonColorConnect}}" size="large">Connect</ion-button>
+            </ion-col>
+          </ion-row>
+</ion-content>

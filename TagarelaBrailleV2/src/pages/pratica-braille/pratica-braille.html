@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Prática Braille</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <div class="celulas">
+      <div class="imagem">
+        <img style=" width: 80%;" src={{imagem}}>
+      </div>
+      <div class="cell-braille">
+        <a id="c1p1" (click)="marcar('c1p1')" class="btn-large point-braille ponto"></a>
+        <a id="c1p4" (click)="marcar('c1p4')" class="btn-large point-braille ponto"></a>
+        <a id="c1p2" (click)="marcar('c1p2')" class="btn-large point-braille ponto"></a>
+        <a id="c1p5" (click)="marcar('c1p5')" class="btn-large point-braille ponto"></a>
+        <a id="c1p3" (click)="marcar('c1p3')" class="btn-large point-braille ponto"></a>
+        <a id="c1p6" (click)="marcar('c1p6')" class="btn-large point-braille ponto"></a>
+      </div>
+    </div> 
+    <div >
+      <div class="palavra">
+        <h1 class="texto">{{palavra}}</h1>
+      </div>
+      <div class="sinais">
+        <img *ngFor="let imgBraille of simbolos" class="sinais-img" src={{imgBraille}}>
+      </div>
+    </div>
+    <button (click)='validar()' ion-button full>OK</button>
+    <button (click)='pular()' ion-button full>Pular</button>
+  </div>
+</ion-content>

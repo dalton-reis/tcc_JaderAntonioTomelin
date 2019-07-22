@@ -1,0 +1,7 @@
+{
+  "name": "TouchBrailleApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

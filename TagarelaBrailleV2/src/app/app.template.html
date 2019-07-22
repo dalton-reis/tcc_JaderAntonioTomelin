@@ -1,0 +1,45 @@
+<ion-split-pane>
+
+  <ion-menu id="loggedOutMenu" [content]="content">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="outer-content">
+
+      <ion-list>
+        <ion-list-header>
+          Navegue
+        </ion-list-header>
+        <button ion-item menuClose (click)="paginaInicial()">
+          <ion-icon item-start name="home"></ion-icon>
+          Pagina inicial
+        </button>
+        <button ion-item menuClose *ngFor="let p of PaginasMenu" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Informações
+        </ion-list-header>
+        <button ion-item menuClose (click)="openTutorial()">
+          <ion-icon item-start name="help-circle"></ion-icon>
+          Abrir Tutorial
+        </button>
+        <button ion-item menuClose (click)="Informacoes()">
+          <ion-icon item-start name="information-circle"></ion-icon>
+          Informações
+        </button>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <!-- main navigation -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>
+
+</ion-split-pane>
